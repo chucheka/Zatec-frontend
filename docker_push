@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+docker tag react-example aabhusan/react-example-2:latest
+docker push aabhusan/react-example-2
+
+
