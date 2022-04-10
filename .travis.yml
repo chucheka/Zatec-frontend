@@ -12,8 +12,8 @@ deploy:
   - provider: script
     script: bash ./.docker/scripts/deploy.sh
     on:
+      branch: main
+  - provider: script
+    script: bash ./.docker/scripts/deploy.dev.sh
+    on:
       branch: develop
-  # - provider: script
-  #   script: bash ./.docker/scripts/deploy.dev.sh
-  #   on:
-  #     branch: main
